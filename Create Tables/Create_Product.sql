@@ -1,0 +1,6 @@
+CREATE TABLE PRODUCT(
+    Product_ID NUMBER(5) CONSTRAINT product_id PRIMARY KEY,
+    Prod_Name VARCHAR2(30) NOT NULL,
+    Prod_Desc VARCHAR2(30) NOT NULL,
+    Prod_Price DECIMAL(8,2) NOT NULL
+);
