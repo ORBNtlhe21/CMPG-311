@@ -1,0 +1,36 @@
+
+-- Chef table
+CREATE OR REPLACE VIEW CHEF_VIEW AS
+SELECT Emp_ID, Salary_Amt, Num_Hours_Worked
+FROM CHEF
+WHERE Salary_Amt > 4000;
+
+-- Manager table
+CREATE OR REPLACE VIEW MANAGER_VIEW AS
+SELECT Emp_ID, Salary_Amt, Num_Hours_Worked
+FROM MANAGER
+WHERE Num_Hours_Worked >= 40;
+
+-- Waiter table
+CREATE OR REPLACE VIEW WAITER_VIEW AS
+SELECT Emp_ID, Salary_Amt, Num_Hours_Worked
+FROM WAITER
+WHERE Emp_Lname LIKE 'S%';
+
+-- Security table
+CREATE OR REPLACE VIEW SECURITY_VIEW AS
+SELECT Emp_ID, Salary_Amt, Num_Hours_Worked
+FROM SECURITY
+WHERE Salary_Amt BETWEEN 3000 AND 4000;
+
+-- Bartender table
+CREATE OR REPLACE VIEW BARTENDER_VIEW AS
+SELECT Emp_ID, Salary_Amt, Num_Hours_Worked
+FROM BARTENDER
+WHERE Num_Hours_Worked < 30;
+
+-- Hostess table
+CREATE OR REPLACE VIEW HOSTESS_VIEW AS
+SELECT Emp_ID, Salary_Amt, Num_Hours_Worked
+FROM HOSTESS
+WHERE Emp_Fname LIKE '%a%';
