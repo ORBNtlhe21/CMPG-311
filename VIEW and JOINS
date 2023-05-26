@@ -17,7 +17,7 @@ CREATE OR REPLACE VIEW WAITER_VIEW AS
 SELECT w.Emp_ID, w.Salary_Amt, w.Num_Hours_Worked, e.Emp_Fname, e.Emp_Lname
 FROM WAITER w
 JOIN EMPLOYEE e ON w.Emp_ID = e.Emp_ID
-WHERE e.Emp_Lname LIKE 'Smith%';
+WHERE e.Emp_Lname LIKE 'S%';
 
 -- Security table
 CREATE OR REPLACE VIEW SECURITY_VIEW AS
@@ -38,4 +38,4 @@ CREATE OR REPLACE VIEW HOSTESS_VIEW AS
 SELECT h.Emp_ID, h.Salary_Amt, h.Num_Hours_Worked, e.Emp_Fname, e.Emp_Lname
 FROM HOSTESS h
 JOIN EMPLOYEE e ON h.Emp_ID = e.Emp_ID
-WHERE e.Emp_Fname = 'Emily';
+WHERE e.Emp_Fname = '%a%';
