@@ -16,3 +16,13 @@ HAVING SUM(Ticket_Price) > 1000.00;
 This query calculates the total sum of ticket prices for each payment type and groups the data accordingly. 
 The HAVING clause filters the results to include only those groups with a sum of ticket prices greater than 1000.00.
 The query retrieves the payment types associated with these qualifying groups, providing information about the payment types for groups that have generated total ticket sales exceeding 1000.00.
+
+--Supplier
+SELECT Supplier_ID, AVG(Quantity) AS Average_Quantity
+FROM PRODUCT_SUPPLIED
+GROUP BY Supplier_ID
+HAVING AVG(Quantity) > 10;
+
+This query calculates the average quantity of products provided by each supplier. It groups the data by the supplier's ID using the GROUP BY clause.
+The HAVING clause filters out groups with an average quantity less than or equal to 10. 
+As a result, the query displays the supplier's ID and the corresponding average quantity, highlighting suppliers who exceed an average product supply of 10.
