@@ -1,17 +1,9 @@
-EMPLOYEE TABLE
-SELECT Emp_Type, COUNT(*) AS Emp_Count
+SELECT AVG(Salary_Amt) AS Average_Salary
 FROM EMPLOYEE
 GROUP BY Emp_Type
-HAVING COUNT(*) > 5;
+HAVING AVG(Salary_Amt) > 2000.00;
 
-CUSTOMER TABLE
-SELECT Cust_Num, COUNT(*) AS Cust_Count
-FROM CUSTOMER
-GROUP BY Cust_Num
-HAVING COUNT(*) > 2;
+This SELECT statement queries the EMPLOYEE table to determine the average salary for different employee types. It groups the data by employee type using the GROUP BY clause. 
+The HAVING clause is applied to filter the result and includes only those groups with an average salary greater than 2000.00.
+In summary, the query calculates the average salary for each employee type and selects only the groups where the average salary is higher than 2000.00.
 
-BOOKING
-SELECT Table_Num, COUNT(*) AS Booking_Count
-FROM BOOKINGS
-GROUP BY Table_Num
-HAVING COUNT(*) > 3;
