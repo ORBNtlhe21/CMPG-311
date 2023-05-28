@@ -1,0 +1,5 @@
+INSERT INTO EVENTS
+VALUES (Seq_Events.NEXTVAL,'Konka Festival','Festival',TO_DATE('2023-06-20','YYYY-MM-DD'));
+
+INSERT INTO EVENTS
+VALUES (Seq_Events.NEXTVAL,'AKA Live','Concert',TO_DATE('2023-02-18','YYYY-MM-DD'));
