@@ -1,8 +1,0 @@
-CREATE TABLE BOOKINGS(
-    Bookings_ID NUMBER(4) CONSTRAINT bookings_id_pk PRIMARY KEY,
-    Emp_ID NOT NULL REFERENCES EMPLOYEE(Emp_ID),
-    Customer_ID NOT NULL REFERENCES CUSTOMER(Customer_ID),
-    Table_Num NUMBER(2) NOT NULL,
-    Booking_Date DATE NOT NULL,
-    Booking_Time TIMESTAMP NOT NULL
-);
