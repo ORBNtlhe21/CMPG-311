@@ -1,4 +1,22 @@
-SELECT p.Product_ID, p.Prod_Name, p.Prod_Desc, p.Prod_Price, o.Other_Attribute
-FROM PRODUCT p INNER JOIN OTHER_TABLE o 
+**Inner Join between PRODUCT and CUSTOMER_ORDER:
+SELECT p.Product_ID, p.Prod_Name, o.Customer_ID, o.Quantity
+FROM PRODUCT p INNER JOIN CUSTOMER_ORDER o 
 ON (p.Product_ID = o.Product_ID);
+
+**Left Outer Join between EMPLOYEE and BOOKINGS:
+SELECT e.Emp_ID, e.Emp_Fname, b.Bookings_ID, b.Table_Num
+FROM EMPLOYEE e
+LEFT JOIN BOOKINGS b ON e.Emp_ID = b.Emp_ID;
+
+
+**Right Outer Join between SUPPLIER and PRODUCT_SUPPLIED:
+SELECT s.Supplier_ID, s.Supplier_Name, ps.Product_ID, ps.Quantity
+FROM SUPPLIER s RIGHT JOIN PRODUCT_SUPPLIED ps 
+ON (s.Supplier_ID = ps.Supplier_ID);
+
+**Full Outer Join between EVENTS and TICKETS:
+SELECT e.Event_ID, e.Event_Name, t.Ticket_ID, t.Ticket_Price
+FROM EVENTS e FULL JOIN TICKETS t 
+ON (e.Event_ID = t.Event_ID);
+
 
