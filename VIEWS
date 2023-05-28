@@ -4,14 +4,23 @@ AS SELECT Emp_ID, Emp_Fname, Emp_Lname, Salary_Amt
 FROM EMPLOYEE
 WHERE Salary_Amt > 5000.00;
 
+The HighSalaryEmployees view is based on the EMPLOYEE table, showing salary details of employees who earn more than a specified amount. 
+This view includes columns like Emp_ID, Emp_Fname, Emp_Lname, and Salary_Amt. It displays only employees with a salary higher than 20000.00, as specified by the WHERE clause.
+
 -- the following view retrieves information about customers whose last names start with the letter 'S'.
 CREATE OR REPLACE VIEW CustomersByLastName
 AS SELECT Customer_ID, Cust_FName, Cust_LName, Cust_CellNum, Cust_Email
 FROM CUSTOMER
 WHERE Cust_LName LIKE 'S%';
 
+The view filters the displayed data using a WHERE clause. 
+In this scenario, the specified condition is that the Cust_LName column should match the pattern 'S%', indicating that only customer records with last names starting with the letter 'S' will be included in the view.
+
 -- View to show tickets with a specific payment type
 CREATE OR REPLACE VIEW TicketsByPaymentType 
 AS SELECT Ticket_ID, Event_ID, Customer_ID, Ticket_Price, Num_Of_Tickets, Type_Of_Payment, Date_Of_Transaction
 FROM TICKETS
 WHERE Type_Of_Payment = 'Credit';
+
+The view is filtered to only include ticket records with a payment type of 'Credit'. 
+This is done by using a WHERE clause, which specifies the condition that Type_Of_Payment must be equal to 'Credit'.
