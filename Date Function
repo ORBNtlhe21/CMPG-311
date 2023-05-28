@@ -1,0 +1,3 @@
+SELECT * 
+FROM BOOKINGS 
+WHERE Booking_Date = TO_DATE('2023-05-29', 'YYYY-MM-DD');
