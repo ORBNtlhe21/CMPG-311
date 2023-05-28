@@ -1,1 +1,4 @@
+SELECT p.Product_ID, p.Prod_Name, p.Prod_Desc, p.Prod_Price, o.Other_Attribute
+FROM PRODUCT p INNER JOIN OTHER_TABLE o 
+ON (p.Product_ID = o.Product_ID);
 
