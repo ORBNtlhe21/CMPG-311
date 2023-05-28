@@ -17,6 +17,7 @@ SELECT Cust_Email FROM customer;
 SELECT Salary_Amt FROM employee;
 SELECT * FROM product;
 SELECT Emp_ID,Customer_ID FROM bookings; 
+SELECT DISTINCT Customer_ID FROM customer;
 
                 /*Aggregate functions*/                
 SELECT AVG(Salary_Amt) FROM employees;
@@ -29,3 +30,9 @@ SELECT Table_Num FROM bookings WHERE Bookings_ID = 1458 AND Customer_ID = 1245;
 SELECT * FROM customer_order WHERE Customer_ID = 1234 OR Customer_ID = 1245;
 SELECT Cust_Email FROM customer WHERE Cust_Fname LIKE 'k%';
 SELECT * FROM events WHERE Event_ID LIKE 2563;
+
+                /*character functions*/
+Select UPPER(Event_Name) FROM events;
+SELECT SUBSTR(Event_Name,4) FROM events;
+SELECT LENGTH(Supplier_Email) FROM supplier WHERE Supplier_ID = 2589;
+SELECT INITCAP(Prod_Name) FROM product;
