@@ -7,3 +7,12 @@ This SELECT statement queries the EMPLOYEE table to determine the average salary
 The HAVING clause is applied to filter the result and includes only those groups with an average salary greater than 2000.00.
 In summary, the query calculates the average salary for each employee type and selects only the groups where the average salary is higher than 2000.00.
 
+
+SELECT Type_Of_Payment
+FROM TICKETS
+GROUP BY Type_Of_Payment
+HAVING SUM(Ticket_Price) > 1000.00;
+
+This query calculates the total sum of ticket prices for each payment type and groups the data accordingly. 
+The HAVING clause filters the results to include only those groups with a sum of ticket prices greater than 1000.00.
+The query retrieves the payment types associated with these qualifying groups, providing information about the payment types for groups that have generated total ticket sales exceeding 1000.00.
