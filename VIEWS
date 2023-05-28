@@ -9,3 +9,9 @@ CREATE OR REPLACE VIEW CustomersByLastName
 AS SELECT Customer_ID, Cust_FName, Cust_LName, Cust_CellNum, Cust_Email
 FROM CUSTOMER
 WHERE Cust_LName LIKE 'S%';
+
+-- View to show tickets with a specific payment type
+CREATE OR REPLACE VIEW TicketsByPaymentType AS
+SELECT Ticket_ID, Event_ID, Customer_ID, Ticket_Price, Num_Of_Tickets, Type_Of_Payment, Date_Of_Transaction
+FROM TICKETS
+WHERE Type_Of_Payment = 'Credit Card';
