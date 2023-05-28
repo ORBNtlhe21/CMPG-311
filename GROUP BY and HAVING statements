@@ -21,8 +21,8 @@ The query retrieves the payment types associated with these qualifying groups, p
 SELECT Supplier_ID, AVG(Quantity) AS Average_Quantity
 FROM PRODUCT_SUPPLIED
 GROUP BY Supplier_ID
-HAVING AVG(Quantity) > 200;
+HAVING AVG(Quantity) > 12000;
 
 This query calculates the average quantity of products provided by each supplier. It groups the data by the supplier's ID using the GROUP BY clause.
-The HAVING clause filters out groups with an average quantity less than or equal to 200. 
-As a result, the query displays the supplier's ID and the corresponding average quantity, highlighting suppliers who exceed an average product supply of 200.
+The HAVING clause filters out groups with an average quantity less than or equal to 12000. 
+As a result, the query displays the supplier's ID and the corresponding average quantity, highlighting suppliers who exceed an average product supply of 12000.
