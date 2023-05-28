@@ -1,5 +1,11 @@
 --  view that displays the salary details of employees who earn more than a designated amount.
-CREATE OR REPLACE VIEW HighSalaryEmployees AS
-SELECT Emp_ID, Emp_Fname, Emp_Lname, Salary_Amt
+CREATE OR REPLACE VIEW HighSalaryEmployees 
+AS SELECT Emp_ID, Emp_Fname, Emp_Lname, Salary_Amt
 FROM EMPLOYEE
 WHERE Salary_Amt > 5000.00;
+
+-- the following view retrieves information about customers whose last names start with the letter 'S'.
+CREATE OR REPLACE VIEW CustomersByLastName
+AS SELECT Customer_ID, Cust_FName, Cust_LName, Cust_CellNum, Cust_Email
+FROM CUSTOMER
+WHERE Cust_LName LIKE 'S%';
