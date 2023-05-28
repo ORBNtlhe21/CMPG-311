@@ -5,8 +5,8 @@ ON (p.Product_ID = o.Product_ID);
 
 **Left Outer Join between EMPLOYEE and BOOKINGS:
 SELECT e.Emp_ID, e.Emp_Fname, b.Bookings_ID, b.Table_Num
-FROM EMPLOYEE e
-LEFT JOIN BOOKINGS b ON e.Emp_ID = b.Emp_ID;
+FROM EMPLOYEE e LEFT JOIN BOOKINGS b 
+ON (e.Emp_ID = b.Emp_ID);
 
 
 **Right Outer Join between SUPPLIER and PRODUCT_SUPPLIED:
