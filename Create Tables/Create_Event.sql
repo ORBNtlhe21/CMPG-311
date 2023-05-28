@@ -1,6 +1,0 @@
-CREATE TABLE EVENTS(
-    Event_ID NUMBER(4) CONSTRAINT event_id_pk PRIMARY KEY,
-    Event_Name VARCHAR2(20) NOT NULL,
-    Event_Type VARCHAR2(30) NOT NULL,
-    Event_Date DATE NOT NULL
-);
