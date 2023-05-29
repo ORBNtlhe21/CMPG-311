@@ -3,20 +3,24 @@ SELECT p.Product_ID, p.Prod_Name, o.Customer_ID, o.Quantity
 FROM PRODUCT p INNER JOIN CUSTOMER_ORDER o 
 ON (p.Product_ID = o.Product_ID);
 
+The INNER JOIN clause combines the rows from both tables that have matching Product_ID values. 
+This means that the query will return rows that contain information about products and customer orders that have the same Product_ID value.
+
+
 **Left Outer Join between EMPLOYEE and BOOKINGS:
 SELECT e.Emp_ID, e.Emp_Fname, b.Bookings_ID, b.Table_Num
 FROM EMPLOYEE e LEFT JOIN BOOKINGS b 
 ON (e.Emp_ID = b.Emp_ID);
 
+ query retrieves information from the EMPLOYEE and BOOKINGS tables using a left join based on their shared column, Emp_ID.
+ This query combines employee and booking information and retrieves it in a single result set, including information from both tables based on the matching Emp_ID values.
 
 **Right Outer Join between SUPPLIER and PRODUCT_SUPPLIED:
 SELECT s.Supplier_ID, s.Supplier_Name, ps.Product_ID, ps.Quantity
 FROM SUPPLIER s RIGHT JOIN PRODUCT_SUPPLIED ps 
 ON (s.Supplier_ID = ps.Supplier_ID);
 
-**Full Outer Join between EVENTS and TICKETS:
-SELECT e.Event_ID, e.Event_Name, t.Ticket_ID, t.Ticket_Price
-FROM EVENTS e FULL JOIN TICKETS t 
-ON (e.Event_ID = t.Event_ID);
-
+The query retrieves the Supplier_ID, Supplier_Name, Product_ID, and Quantity columns from the SUPPLIER and PRODUCT_SUPPLIED tables. 
+It employs a right join to include all rows from the PRODUCT_SUPPLIED table, regardless of whether there are matching rows in the SUPPLIER table. 
+The result is a combined result set containing data from both tables.
 
